@@ -1,0 +1,138 @@
+    %Type setting your answer here.
+
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+\newcounter{question}
+\newenvironment{question}[1][]{\refstepcounter{question}\par\medskip
+   \noindent\textbf{\thequestion. #1} \rmfamily\begin{bfseries}}{\end{bfseries}\medskip}
+   
+\newcounter{subquestion}[question]
+\newenvironment{subquestion}[1][]{\refstepcounter{subquestion}\par\medskip
+   \noindent\textbf{\thequestion.\thesubquestion #1} \rmfamily\begin{bfseries}}{\end{bfseries}\medskip}
+
+\title{CSC 565 2020 Fall Homework 2}
+%replace name and unityID for all group members.
+\author{    
+    name1, unityID1 \\
+    \and
+    name2, unityID2 
+}
+
+\begin{document}
+
+  \maketitle
+  
+  \noindent You can create a latex project of this homework through this \href{https://www.overleaf.com/docs?snip_uri=https://donsheehy.github.io/graphtheoryhomework/hw2.tex}{link}.
+
+  \section*{Cartesian Products}
+    Let $G$, $H$ be graphs. The Cartesian product between $G$ and $H$ can be defined as:
+    %TODO: need update for clarity.
+    \begin{alignat*}{2}
+        G \Box H := (& V_G \times V_H, &&~\\
+        &\{(ab, cd)~|~ & (a=c~&\text{and}~(b, d)\in E_H)\\
+        &~ & &\text{or} \\
+        &~ & (b=d~&\text{and}~(a, c)\in E_G), \\
+        &~ & a,c &\in V_G, \\
+        &~ & b, d, &\in V_H\})
+    \end{alignat*}
+    \begin{question}
+        Give a function $f_V: V_{G \Box H} \rightarrow V_{H \Box G}$ that induces an isomorphism. No need to prove it is an isomorphism. 
+    \end{question}
+    \\\\
+    \textit{Answer:}
+    \\\\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %Type setting your answer here.
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{question}
+        Prove that for all $i, j \geq 3$, $C_j \Box P_j$ is planar. \\
+        Hint: You can try to do it by providing an embedding for the general case.
+    \end{question}
+    \\\\
+    \textit{Answer:}
+    \\\\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %Type setting your answer here.
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{question}
+        Prove $C_3 \Box C_3$ is \underline{NOT} planar by completing the following steps. It is a fact that $C_3 \Box C_3$ is 3-connected. Think about this and convince yourself of this first.
+    \end{question}
+    \begin{subquestion}
+        Suppose it is planar. How many faces should it have according to Euler's formula?
+    \end{subquestion}
+    \\\\
+    \textit{Answer:}
+    \\\\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %Type setting your answer here.
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{subquestion}
+        How many non-separating induced cycles are there? You may assume without proving it that all such cycles have length 3 or 4.
+    \end{subquestion}
+    \\\\
+    \textit{Answer:}
+    \\\\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %Type setting your answer here.
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{subquestion}
+        Complete the proof.
+    \end{subquestion}
+    \\\\
+    \textit{Answer:}
+    \\\\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %Type setting your answer here.
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+  \section*{Outerplanar Graphs}
+    \begin{question}
+        Let $G$ be an outerplanar graph with $n$ vertices and as many edges as possible but subject to the constraint that $G$ is not 2-connected. How many edges does $G$ have? Prove it.
+    \end{question}
+    \\\\
+    \textit{Answer:}
+    \\\\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %Type setting your answer here.
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{question}
+        Let $G$ be the graph:
+        \begin{align*}
+            G = ([n], \{(i, j)~|~(j-i)~\%~n = 1 \lor (j-i)~\%~n = 2\}), n \geq 4
+        \end{align*}
+        $\%$ is the modulo operator. Prove that $G$ is \underline{NOT} outerplanar.
+    \end{question}
+    \\\\
+    \textit{Answer:}
+    \\\\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %Type setting your answer here.
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+  \section*{Extra Questions}
+    These questions are for your interest and practice. It's recommended to think about them. They will not be graded.
+    \begin{question}
+        Prove that every outerplanar graph is 3-colorable.
+    \end{question}
+    \begin{question}
+        Prove that no outerplanar graph is 3-connected.
+    \end{question}
+
+\end{document}
