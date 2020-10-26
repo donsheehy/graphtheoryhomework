@@ -1,0 +1,101 @@
+%Type setting your answer here.
+
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks = true,
+        linkcolor = blue,
+        urlcolor  = blue,
+        citecolor = blue,
+        anchorcolor = blue]{hyperref}
+
+\newcounter{question}
+\newenvironment{question}[1][]{\refstepcounter{question}\par\medskip
+\noindent\textbf{\thequestion. #1} \rmfamily\begin{bfseries}}{\end{bfseries}\medskip}
+
+\newcounter{subquestion}[question]
+\newenvironment{subquestion}[1][]{\refstepcounter{subquestion}\par\medskip
+\noindent\textbf{\thequestion.\thesubquestion #1} \rmfamily\begin{bfseries}}{\end{bfseries}\medskip}
+
+\title{CSC 565 2020 Fall Homework 5}
+%replace name and unityID for all group members.
+\author{
+name1, unityID1 \\
+\and
+name2, unityID2
+}
+
+\begin{document}
+
+\maketitle
+
+\noindent You can create a latex project of this homework through this \href{https://www.overleaf.com/docs?snip_uri=https://donsheehy.github.io/graphtheoryhomework/hw5.tex}{link}.
+
+\section*{Boundary Matrices}
+
+\begin{question}
+  Write out the boundary matrix for the following graphs:
+  \begin{enumerate}
+    \item $K_3$
+    \item $P_3$
+    \item $K_2\times K_2$
+  \end{enumerate}
+\end{question}
+
+\textit{Answer:}
+\\\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Typeset your answer here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{question}
+  Let $T$ be a tree with $5$ vertices.  Let $\partial$ be the boundary matrix for $T$.
+  Let $A$ be the $4\times 4$ matrix formed by deleting one row of $\partial$.
+  What are the possible values of $\det(A)$?
+\\\\
+  Hint: Try to find an ordering on vertices such that $A$ is an upper-triangular matrix. 
+\end{question}
+\\\\
+\textit{Answer:}
+\\\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Typeset your answer here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\emph{Challenge to think about: What if $T$ were not a tree?}
+
+\section*{The Adjacency Matrix}
+
+Remember $M^k = \overbrace{M* ... * M}^{k}$, where $M$ is a square matrix and $*$ is matrix multiplication.
+\\\\
+Here is an interesting fact about the adjacency matrix $A_G$ of a graph $G$.
+For any $k$, the entries $[A_G^k]_{ij}$ are the number of distinct walks from $i$ to $j$ of length $k$ in $G$.
+If you haven't seen this before, you might want to work it out by expanding the matrix multiplication and applying induction.
+This fact has the following interesting consequences for you to prove.
+
+\begin{question}
+  Prove that the trace of $A_G^3$ is equal to six times the number of $K_3$ subgraphs in $G$.
+\end{question}
+\\\\
+\textit{Answer:}
+\\\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Type setting your answer here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{question}
+  Let $M = A_G^2 - L_G$, where $L_G$ is the Laplacian of $G$.
+  Prove that $M_{ij}$ is the number of paths (not walks) from $v_i$ to $v_j$ of length $1$ or $2$.
+\end{question}
+\\\\
+\textit{Answer:}
+\\\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Typeset your answer here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
